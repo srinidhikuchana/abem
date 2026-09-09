@@ -1,4 +1,4 @@
-# ABEM — Vercel + MongoDB + OpenRouter
+# ABEM — Autonomous Business Exception Manager
 
 Small hackathon-ready deployment of the ABEM blueprint. It keeps the MVP to inventory shortage, supplier delivery failure and invoice mismatch, with deterministic detection/policy checks, AI investigation, approval, safe mock actions and audit history.
 
