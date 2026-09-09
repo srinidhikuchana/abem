@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ABEM — Business Exception Manager</title>
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div><strong>ABEM</strong><span> Autonomous Business Exception Manager</span></div>
+    <button id="refreshBtn" class="ghost">Refresh</button>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">DETECT → INVESTIGATE → DECIDE → ACT → VERIFY</p>
+        <h1>Business exceptions, handled with bounded AI.</h1>
+        <p class="muted">MongoDB + Vercel Functions + OpenRouter.</p>
+      </div>
+      <div class="authbox">
+        <label>Demo API key <input id="apiKey" type="password" placeholder="Optional" /></label>
+        <button id="saveKey">Save</button>
+      </div>
+    </section>
+
+    <section id="metrics" class="cards"></section>
+
+    <section class="panel">
+      <div class="panelhead">
+        <div><h2>Exception queue</h2><p class="muted">Three MVP exception types from the blueprint.</p></div>
+        <div class="filters">
+          <select id="statusFilter"><option value="">All status</option><option>open</option><option>investigating</option><option>decided</option><option>approval_pending</option><option>resolved</option><option>failed</option></select>
+          <select id="severityFilter"><option value="">All severity</option><option>high</option><option>medium</option><option>low</option></select>
+        </div>
+      </div>
+      <div id="queue" class="queue"></div>
+    </section>
+
+    <section id="detail" class="panel hidden"></section>
+  </main>
+
+  <script src="/assets/app.js"></script>
+</body>
+</html>
